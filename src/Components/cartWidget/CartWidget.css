@@ -1,7 +1,19 @@
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
 img{
     background-color: white;
     padding: 1rem;
     width: 4rem;
     height: 4rem;
     margin-right: 1rem;
+}
+
+p{
+    font-size: 2rem;
 }
