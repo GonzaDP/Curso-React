@@ -1,0 +1,39 @@
+nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 4.375rem;
+    align-content: center;
+    align-items: center;
+  
+  }
+    
+  .marcaEIcono{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    height: 4.375rem;
+    padding: 1rem;
+  }
+  
+  .seccionesNav{
+    display: flex;
+  }
+  
+  li{
+    width: 7rem;
+    height: 4.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    list-style:none;
+    font-size: 1.2rem;
+  }
+
+  li:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+  }
