@@ -2,6 +2,7 @@ import './NavBar.css'
 import CartWidget from '../cartWidget/CartWidget'
 
 
+
 const NavBar = () => {
 
     return (

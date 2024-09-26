@@ -1,9 +1,10 @@
-import './CartWidget.css'
+import './CartWidget.css'    
+import mugIcon from './mug-saucer-solid.svg';
 
 const CartWidget = () => {
 
     return (
-        <img src='mug-saucer-solid.svg'/>
+        <img src={mugIcon} alt='Mug and Saucer'></img>
     )
 }
 
