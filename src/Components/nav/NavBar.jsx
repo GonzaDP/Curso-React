@@ -11,8 +11,7 @@ const NavBar = () => {
             <p>Coffeeland</p>     
             </div>
             <ul className='seccionesNav'>
-                <li>Cafe</li>
-                <li>Refrescos</li>
+                <li>Bebidas</li>
                 <li>Facturas</li>
                 <li>Tortas</li>
                 <li>Sandwichs</li>
