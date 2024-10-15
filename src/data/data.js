@@ -4,7 +4,7 @@ const products = [
         id:"1",
         name:"Latte",
         price: 2600,
-        description: "",
+        description: "Cafe de especialidad con leche descremada",
         stock: 3 ,
         img:"/img/latte.jpg",
         category:"Bebidas",
@@ -14,7 +14,7 @@ const products = [
         id:"2",
         name:"Cappuccino",
         price: 3000,
-        description: "",
+        description: "Cafe de especialidad con cacao en polvo",
         stock: 2 ,
         img:"/img/cappuccino.jpg",
         category:"Bebidas",
@@ -24,7 +24,7 @@ const products = [
         id:"3",
         name:"Jamon crudo y rúcula",
         price: 8000,
-        description: "",
+        description: "Sandwich de jamon crudo de alta calidad con rúcula fresca",
         stock: 5 ,
         img:"/img/SandJCyR.jpg",
         category:"Sandwichs",
@@ -34,7 +34,7 @@ const products = [
         id:"4",
         name:"Croissant con dulce de leche",
         price: 4500,
-        description: "",
+        description: "Fractura casera rellena con dulce de leche",
         stock: 7 ,
         img:"/img/CdeDDL.jpg",
         category:"Facturas",
@@ -44,7 +44,7 @@ const products = [
         id:"5",
         name:"Lemon pie",
         price: 7000,
-        description: "",
+        description: "Torta de limón y merengue con una masa casera",
         stock: 9 ,
         img:"/img/Lemon pie.jpg",
         category:"Tortas",
@@ -178,8 +178,17 @@ const getProducts = () => {
     return new Promise((resolve, reject) => {
         setTimeout( () => {
             resolve(products)
-        }, 1800)
+        }, 1000)
     })
 }
 
-export { getProducts }
+const getProduct = (idProduct) => {
+    return new Promise((resolve) => {
+        setTimeout( () => {
+            const product = products.find((product) => product.id === idProduct )
+            resolve(product)
+        }, 1000)
+    })
+}
+
+export { getProducts, getProduct }
