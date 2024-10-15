@@ -4,7 +4,9 @@ const products = [
         id:"1",
         name:"Latte",
         price: 2600,
-        img:"/img/latte.jfif",
+        description: "",
+        stock: 3 ,
+        img:"/img/latte.jpg",
         category:"Bebidas",
     },
         
@@ -12,7 +14,9 @@ const products = [
         id:"2",
         name:"Cappuccino",
         price: 3000,
-        img:"/img/cappuccino.jfif",
+        description: "",
+        stock: 2 ,
+        img:"/img/cappuccino.jpg",
         category:"Bebidas",
     },
         
@@ -20,7 +24,9 @@ const products = [
         id:"3",
         name:"Jamon crudo y rúcula",
         price: 8000,
-        img:"/img/SandJCyR.jfif",
+        description: "",
+        stock: 5 ,
+        img:"/img/SandJCyR.jpg",
         category:"Sandwichs",
     },
    
@@ -28,7 +34,9 @@ const products = [
         id:"4",
         name:"Croissant con dulce de leche",
         price: 4500,
-        img:"/img/CdeDDL.jfif",
+        description: "",
+        stock: 7 ,
+        img:"/img/CdeDDL.jpg",
         category:"Facturas",
     },
         
@@ -36,7 +44,9 @@ const products = [
         id:"5",
         name:"Lemon pie",
         price: 7000,
-        img:"/img/Lemon pie.jfif",
+        description: "",
+        stock: 9 ,
+        img:"/img/Lemon pie.jpg",
         category:"Tortas",
     }
     /*          

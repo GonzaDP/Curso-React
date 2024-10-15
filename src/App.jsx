@@ -1,7 +1,7 @@
 import { useState } from 'react'  
 import NavBar from './Components/nav/NavBar'
 import './App.css'
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
+import ItemListContainerWithHoc from './Components/ItemListContainer/ItemListContainer'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
     <NavBar />
-    <ItemListContainer />
+    <ItemListContainerWithHoc />
     </div>
   )
 }

@@ -1,3 +1,35 @@
-.Itemlist{
+.itemlistcontainer{
+    padding: 0.5rem;
     display: flex;
+    flex-direction: row;
+
+}
+
+.itemlistcontainer .item{
+    height: 15rem;
+    width: 15rem;
+    border: 0.3rem solid rgb(146, 88, 12);
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    background-color: black ;
+}
+
+.itemlistcontainer .item p{
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    width: auto;
+
+}
+
+.itemlistcontainer .item .img{
+    padding: 0;
+    width: 6rem;
+    height: 6rem;
+    margin: 1rem;
 }
