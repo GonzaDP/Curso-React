@@ -4,10 +4,12 @@
     align-content: center;
     align-items: center;
     margin-right: 1rem;
+    
 }
 
 img{
-    background-color: white;
+    background-color: #e0ae79;
+    border-radius: 2rem;
     padding: 0.5rem;
     width: 3rem;
     height: 3rem;
@@ -16,4 +18,6 @@ img{
 
 p{
     font-size: 2rem;
+    color: #e0ae79;
+    margin-left: -0.5rem;
 }

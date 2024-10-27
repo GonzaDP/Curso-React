@@ -1,6 +1,7 @@
 import useProducts from "../hooks/useProductos";
 import { useState, useEffect } from "react";
 import "./hocFilterProducts.css"
+import magnifyingGlass from './magnifying-glass-solid.svg';
 
 const hocFilterProducts = (Component) => {
 
@@ -23,6 +24,7 @@ const hocFilterProducts = (Component) => {
         return (
             <div className="filterProducts">
             <div className="filter">
+                <img className="lupita" src={magnifyingGlass}/>
                 <input className="filterInput" type="text" placeholder="Busca tu producto aqui" onChange={changeInput}/>
             </div>
             <Component products={search()}/>

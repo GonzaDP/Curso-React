@@ -5,13 +5,26 @@
 }
 
 .filter{
-    margin: 1.6rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1.6rem;
+    margin-left: 1rem;
     width: 20rem;
     height: 2rem;
+    
 }
+
 
 .filterInput{
     width: 100%;
     height: 100%;
     padding-left: 0.5rem;
+    margin-left: -1rem;
+    color: #57382c;
+    border: solid #57382c;
+    border-radius: 1rem;
+}
+
+.lupita{
+    background-color: #e0ae79;
 }

@@ -8,7 +8,6 @@
 .itemlistcontainer .item{
     height: 15rem;
     width: 15rem;
-    border: 0.3rem solid rgb(146, 88, 12);
     display: flex;
     padding: 0.5rem;
     justify-content: center;
@@ -16,15 +15,15 @@
     align-content: center;
     flex-direction: column;
     margin: 1rem;
-    background-color: black ;
+    border: solid #57382c;
+    border-radius: 1rem;
 }
 
 .itemlistcontainer .item p{
     font-size: 1rem;
-    color: white;
+    color: #57382c;
     display: flex;
     width: auto;
-
 }
 
 .itemlistcontainer .item .img{
@@ -33,3 +32,9 @@
     height: 6rem;
     margin: 1rem;
 }
+
+.linkItem{
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #20140f;
+  }

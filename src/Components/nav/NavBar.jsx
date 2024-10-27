@@ -10,12 +10,12 @@ const NavBar = () => {
             <Link to="/" className='marcaEIcono'>
                 <p>Coffeeland</p>     
             </Link>
-            <ul className='seccionesNav'>
-                <li><Link to="/category/Bebidas">Bebidas</Link></li>
-                <li><Link to="/category/Facturas">Facturas</Link></li>
-                <li><Link to="/category/Tortas">Tortas</Link></li>
-                <li><Link to="/category/Sandwichs">Sandwichs</Link></li>
-            </ul>
+            <div className='seccionesNav'>
+                <Link to="/category/Bebidas" className='link'>Bebidas</Link>
+                <Link to="/category/Facturas" className='link'>Facturas</Link>
+                <Link to="/category/Tortas" className='link'>Tortas</Link>
+                <Link to="/category/Sandwichs" className='link'>Sandwichs</Link>
+            </div>
             <CartWidget/>
         </nav>
     )
