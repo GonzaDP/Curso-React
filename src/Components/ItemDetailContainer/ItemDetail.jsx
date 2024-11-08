@@ -13,7 +13,7 @@ const ItemDetail = ({product}) => {
                 <img src={product.img}/>
             </section>
 
-          </div>  
+          </div> 
     )
 }
 

@@ -2,39 +2,66 @@
     padding: 0.5rem;
     display: flex;
     flex-direction: row;
-
+    flex-wrap: wrap;
 }
 
-.itemlistcontainer .item{
+.item{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.itemImg{
     height: 15rem;
     width: 15rem;
-    display: flex;
-    padding: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    margin: 1rem;
-    border: solid #57382c;
-    border-radius: 1rem;
+    margin: 0.7rem;
+    border-radius: 7.5rem;
+    transition: 0.5s;
+    text-decoration: none;
+    overflow: hidden;
 }
 
-.itemlistcontainer .item p{
-    font-size: 1rem;
-    color: #57382c;
-    display: flex;
-    width: auto;
-}
-
-.itemlistcontainer .item .img{
+.img{
     padding: 0;
-    width: 6rem;
-    height: 6rem;
-    margin: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 7.5rem;
+    transition: 0.5s;
+    border: solid #57382c;
+    display: block;
+    transition: transform 0.5s ease;
 }
 
-.linkItem{
-    margin-top: 1rem;
+.overlay {
+    margin-left: 0rem;
+    margin-top: -15rem;
+    border-radius: 7.5rem;
+    width: 15rem;
+    height: 15rem;
+    background-color: #57382ccb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: #e0ae79;
+}
+
+  .itemImg:hover .overlay{
+    opacity: 0.9;  
+}
+
+  .itemImg:hover {
+    transform: scale(1.1);
+}
+
+.name{
+    font-size: 1.3rem;
+    width: auto;
+    height: auto;
     text-decoration: none;
     color: #20140f;
+    background-color: #e0ae79;
+    padding: 0.4rem;
   }

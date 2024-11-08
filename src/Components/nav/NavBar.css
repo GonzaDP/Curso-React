@@ -5,7 +5,8 @@ nav{
     height: 4.375rem;
     align-content: center;
     align-items: center;
-  
+    border-radius: 2.5rem;
+    padding: 0.5rem;
   }
     
   .marcaEIcono{
@@ -21,14 +22,10 @@ nav{
   .seccionesNav{
     display: flex;
   }
-  
-  li{
-
-  }
 
   .link{
     width: 7rem;
-    height: 4.375rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +34,9 @@ nav{
     font-size: 1.2rem;
     text-decoration: none;
     color: #e0ae79; 
-    text-decoration: none;
+    text-decoration: none; 
+    border-radius: 2rem;
+
   }
 
   .link:hover{

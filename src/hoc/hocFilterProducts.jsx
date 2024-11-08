@@ -25,7 +25,7 @@ const hocFilterProducts = (Component) => {
             <div className="filterProducts">
             <div className="filter">
                 <img className="lupita" src={magnifyingGlass}/>
-                <input className="filterInput" type="text" placeholder="Busca tu producto aqui" onChange={changeInput}/>
+                <input className="filterInput" type="text" placeholder="Busca tu producto aqui..." onChange={changeInput}/>
             </div>
             <Component products={search()}/>
             </div>
