@@ -11,6 +11,11 @@ const ItemDetailContainer = () => {
     const {idProduct} = useParams()
     const {loading} = useProducts()
 
+    const addProduct = (count) => {
+        const productCart = { ...product, quantity: count }
+        console.log(productCart)
+    }
+
     useEffect(() => {
         getProduct(idProduct)
         .then((info) => setProduct(info))
@@ -18,13 +23,12 @@ const ItemDetailContainer = () => {
 
     return(
         
-        /*<ItemDetail product={product}/>   */
         <>
         {
         loading === true ?
         <Loading/>
         :   
-        <ItemDetail product={product}/>
+        <ItemDetail product={product} addProduct={addProduct}/>
         }
     </>
     )
