@@ -10,7 +10,7 @@ const ItemDetail = ({product, addProduct}) => {
                 <p>${product.price}</p>
                 <ItemCount stock={product.stock} addProduct={addProduct}/>
             </section>
-            <section >
+            <section className="sectionImg" >
                 <img src={product.img}/>
             </section>
 

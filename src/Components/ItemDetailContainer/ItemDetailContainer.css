@@ -1,17 +1,23 @@
 .itemdetailcontainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;    
-    width: 100%;
-    height: 32rem;   
+    justify-content: space-evenly;
     padding-top: 1rem;
 }
 
+.sectionImg{
+    display: flex;
+    width: 35rem;
+    height: 35rem;
+    border-radius: 17.5rem;
+}
+
 .itemdetailcontainer img{
-    width: 30rem;
-    height: 30rem;
-    border-radius: 15rem;
-    border: solid #57382c ;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 17.5rem;
+    border: solid #57382c;
     padding: 0;
 }
 
@@ -24,13 +30,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 30rem;
-    height: 30rem;
-    border: solid;
-    border-radius: 2rem;
-    border-color: #57382c;
+    width: 35rem;
+    height: 35rem;
+    border: solid #57382c;
     color: #774E24;
-    border-radius: 15rem;
+    border-radius: 17.5rem;
 }
 
 .itemdetailcontainer h1{
