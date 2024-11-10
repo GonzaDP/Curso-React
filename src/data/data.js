@@ -48,48 +48,58 @@ const products = [
         stock: 9 ,
         img:"/img/Lemon pie.jpg",
         category:"Tortas",
-    }
-    /*          
+    },
+         
     {
         id:"6",
-        name:"",
-        price:,
+        name:"Brownie",
+        price: 5000,
+        description:"Torta de chocolate",
+        stock: 6,
         img:"",
-        category:"",
-    }
-        
+        category:"Tortas",
+    },
+
     {
         id:"7",
-        name:"",
-        price:,
+        name:"Brownie",
+        price: 5000,
+        description:"Torta de chocolate",
+        stock: 6,
         img:"",
-        category:"",
-    }
+        category:"Tortas",
+    },
         
     {
         id:"8",
-        name:"",
-        price:,
+        name:"Brownie",
+        price: 5000,
+        description:"Torta de chocolate",
+        stock: 6,
         img:"",
-        category:"",
-    }
+        category:"Tortas",
+    },
         
     {
         id:"9",
-        name:"",
-        price:,
+        name:"Brownie",
+        price: 5000,
+        description:"Torta de chocolate",
+        stock: 6,
         img:"",
-        category:"",
-    }
+        category:"Bebidas",
+    },
         
     {
         id:"10",
-        name:"",
-        price:,
+        name:"Brownie",
+        price: 5000,
+        description:"Torta de chocolate",
+        stock: 6,
         img:"",
-        category:"",
-    }
-        
+        category:"Tortas",
+    },
+/*
     {
         id:"11",
         name:"",
