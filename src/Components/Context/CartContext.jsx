@@ -16,7 +16,7 @@ const totalQuantity = () => {
     return quantity
 }
 
-console.log(cart)
+con
 
 
     return(

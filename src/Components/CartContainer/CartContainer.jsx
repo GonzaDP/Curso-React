@@ -13,8 +13,9 @@ const cartContainer = () => {
                     <div className="cartDetail" key={productCart.id}>
                         <img src={productCart.img} alt="" />
                         <p>{productCart.name}</p>
-                        <p>precio c/u: {productCart.price}</p>
+                        <p>precio c/u: ${productCart.price}</p>
                         <p>cantidad: {productCart.quantity}</p>
+                        <p>precio parcial: ${productCart.price * productCart.quantity}</p>
                     </div>
                 ))
             }
