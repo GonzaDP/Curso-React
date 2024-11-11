@@ -17,9 +17,10 @@
     height: 1rem;
     background-color: #57382c ;
     color: #e0ae79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
 
 .addProduct{
     background-color: #57382c ;

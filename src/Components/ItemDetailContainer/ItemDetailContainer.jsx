@@ -5,15 +5,18 @@ import { useParams } from "react-router-dom"
 import "./ItemDetailContainer.css"
 import Loading from "../loading/loading"
 import useProducts from "../../hooks/useProductos"
+import { useContext } from "react"
+import { CartContext } from "../Context/CartContext"
 
 const ItemDetailContainer = () => {
     const [product,setProduct] = useState({})
+    const { addProductInCart } = useContext(CartContext)
     const {idProduct} = useParams()
     const {loading} = useProducts()
 
     const addProduct = (count) => {
         const productCart = { ...product, quantity: count }
-        console.log(productCart)
+        addProductInCart(productCart)
     }
 
     useEffect(() => {

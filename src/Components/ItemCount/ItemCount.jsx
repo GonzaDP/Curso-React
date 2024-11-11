@@ -1,9 +1,13 @@
 import { useState } from "react"
 import ItemDetail from "../ItemDetailContainer/ItemDetail"
 import "../ItemCount/ItemCount.css"
+import { useContext } from "react"
+import { CartContext } from "../Context/CartContext"
+
  
 const ItemCount = ({ stock, addProduct }) => {
     const [count, setCount] = useState(1)
+    
 
 const handleClickDecrement = () => {
     if(count > 0){

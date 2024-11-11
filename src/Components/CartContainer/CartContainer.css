@@ -1,0 +1,27 @@
+.cartSection{
+    padding: 1rem;
+}
+
+.cartDetail{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1{
+    margin-top: 1rem;
+    color: #57382c;
+}
+
+.cartDetail img{
+    width: 5rem;
+    height: 5rem;
+    border: solid #57382c;
+    border-radius: 2.5rem;
+    padding: 0;
+}
+
+.cartDetail p{
+    color: #774E24;
+    margin: 3rem;
+}

@@ -13,7 +13,6 @@ const ItemDetail = ({product, addProduct}) => {
             <section className="sectionImg" >
                 <img src={product.img}/>
             </section>
-
           </div> 
     )
 }
