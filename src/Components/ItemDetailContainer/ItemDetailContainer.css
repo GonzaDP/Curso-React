@@ -35,6 +35,7 @@
     border: solid #57382c;
     color: #774E24;
     border-radius: 17.5rem;
+    overflow: visible;
 }
 
 .itemdetailcontainer h1{
@@ -42,8 +43,14 @@
     margin-bottom: 1rem;
 }
 
-.itemdetailcontainer p{
+.description{
     font-size: 1.5rem;
     color: #774E24;
+    width: 30rem;
+    text-align: center;
+}
 
+.descriptionPrice{
+    color: #774E24;
+    margin-top: 1rem;
 }

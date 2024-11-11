@@ -9,6 +9,7 @@
 
 .count{
     margin: 0;
+    color: #57382c;
 }
 
 .addAndDiscard{
@@ -24,4 +25,8 @@
     background-color: #57382c ;
     color: #e0ae79;
     margin-bottom: 1rem;
+}
+
+.stock{
+    color: #57382c ;
 }

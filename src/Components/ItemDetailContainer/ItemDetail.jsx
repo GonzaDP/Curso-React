@@ -6,8 +6,8 @@ const ItemDetail = ({product, addProduct}) => {
           <div className="itemdetailcontainer">  
             <section className="itemDescription">
                 <h1 className="tittle">{product.name}</h1>
-                <p>{product.description}</p>
-                <p>${product.price}</p>
+                <p className="description">{product.description}</p>
+                <p className="descriptionPrice">${product.price}</p>
                 <ItemCount stock={product.stock} addProduct={addProduct}/>
             </section>
             <section className="sectionImg" >

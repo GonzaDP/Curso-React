@@ -29,7 +29,7 @@ const handleClickIncrement = () => {
                     <button className="addProduct" onClick={() =>addProduct(count)}>Agregar producto</button>
                 </div>
                 <div>
-                    <p>Stock disponible: {stock}</p>
+                    <p className="stock">Stock disponible: {stock}</p>
                 </div>
             </>
 

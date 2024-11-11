@@ -22,7 +22,7 @@ const products = [
         
     {
         id:"3",
-        name:"Sándwich de j amon crudo y rúcula",
+        name:"Sándwich de jamon crudo y rúcula",
         price: 8000,
         description: "Sandwich de jamon crudo de alta calidad con rúcula fresca.",
         stock: 5 ,
