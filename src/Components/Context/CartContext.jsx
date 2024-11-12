@@ -15,10 +15,6 @@ const totalQuantity = () => {
     const quantity = cart.reduce((total, productCart) => total + productCart.quantity, 0 )
     return quantity
 }
-
-con
-
-
     return(
         <CartContext.Provider value={ { cart, addProductInCart, totalQuantity    }}> 
             {children}
