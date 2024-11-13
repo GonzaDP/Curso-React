@@ -5,7 +5,7 @@ import ItemListContainerWithHoc from './Components/ItemListContainer/ItemListCon
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './Components/Context/CartContext'
-import CartContainer from './Components/CartContainer/CartContainer'
+import Cart from './Components/CartContainer/Cart'
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             <Route path='/' element={ <ItemListContainerWithHoc  />}/> 
             <Route path='/category/:idCategory' element={ <ItemListContainerWithHoc  />}/>
             <Route path='/detail/:idProduct' element={ <ItemDetailContainer />}/>
-            <Route path='/cart' element={<CartContainer/>}/>
+            <Route path='/cart' element={<Cart/>}/>
           </Routes>
           </CartProvider>
       </BrowserRouter>

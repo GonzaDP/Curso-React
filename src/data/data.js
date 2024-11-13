@@ -231,14 +231,13 @@ const products = [
     
     {
         id:"24",
-        name:"Panini de mozzarella,tomate y pesto",
+        name:"Panini de mozzarella, tomate y pesto",
         price: 8000,
         description: "Mozzarella derretida con pesto y tomate en pan tostado, crujiente y aromático.",
         stock: 5 ,
-        img:"/img/Panini de mozzarella,tomate y pesto.jpg",
+        img:"/img/Panini de mozzarella, tomate y pesto.jpg",
         category:"Sandwichs",
     },
-   
    
 /*
     {
