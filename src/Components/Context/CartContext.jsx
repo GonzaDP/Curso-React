@@ -13,7 +13,14 @@ const addProductInCart = (newProduct) => {
         let newCart = [...cart]
         newCart.forEach((productCart)=> {
             if(productCart.id === newProduct.id){
-                productCart.quantity = productCart.quantity + newProduct.quantity
+                const newQuantity = productCart.quantity + newProduct.quantity
+                if(newQuantity > productCart.stock){
+                    alert("Superaste la cantidad en stock")
+                    return productCart
+                }
+                else{
+                    productCart.quantity = productCart.quantity + newProduct.quantity
+                }
             }
         })
 
