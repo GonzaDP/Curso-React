@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const cart = () => {
     const{cart, totalPrice, deleteProductInCart, deleteCart} = useContext(CartContext)
 
-if(cart.length ===0 ){
+if(cart.length === 0 ){
     return(
         <div className="cartEmptyContainer">
             <h2 className="mensajeCartEmpty">No seleccionaste ningun producto todavia ☹️</h2>
@@ -33,10 +33,12 @@ if(cart.length ===0 ){
                 ))
             }
             <div className="totalContainer">
-            <button className="deleteCartButton" onClick={deleteCart}>Eliminar compra</button>
+                <button className="deleteCartButton" onClick={deleteCart}>Eliminar compra</button>
                 <p className="total">Total: ${totalPrice()}</p>
             </div>
-            
+            <Link className="checkoutButtonContainer" to="/checkout">
+                <button className="checkout">Realizar la compra</button>
+            </Link>
         </div>
     )
 }
