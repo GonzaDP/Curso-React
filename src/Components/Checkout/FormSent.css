@@ -1,0 +1,38 @@
+.fondoFormSent{
+    display: flex;
+    justify-content: center;
+}
+
+.sentOrderContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    border: solid #57382c;
+    height: 20rem;
+    width: 45rem;
+    border-radius: 7rem;
+}
+
+.sentOrderContainer h1{
+    font-size: 2.5rem;
+}
+
+.sentOrderContainer p{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #57382c;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 40rem;    
+}
+
+.backToHome{
+    text-decoration: none;
+    background-color: #57382c;
+    color: #e0ae79;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}

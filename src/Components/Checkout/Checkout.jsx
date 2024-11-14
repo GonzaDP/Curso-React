@@ -1,18 +1,22 @@
 import FormCheckout from "./FormCheckout"
-import { Timestamp, addDoc, collection } from "firebase/firestore"
-import { CartContext } from "../Context/CartContext"
+import { Timestamp, doc ,addDoc, collection } from "firebase/firestore"
+import { CartContext, CartProvider } from "../Context/CartContext"
 import { useState, useContext } from "react"
 import db from "../../db/db.js"
+import { Link } from "react-router-dom"
+import FormSent from "./FormSent.jsx"
 
 
-const Checkout = () => {
+
+const Checkout = ({}) => {
   const [dataForm, setDataForm] = useState({
     fullname: "",
     phone: "",
     email: ""   
   })
   
-const { cart, totalPrice } = useContext(CartContext)
+const [orderId, setOrderId] = useState(null)  
+const { cart, totalPrice, deleteCart } = useContext(CartContext)
 
 const handleChangeInput = (event) => {
     setDataForm({ ...dataForm, [event.target.name]: event.target.value })
@@ -32,13 +36,34 @@ const uploadOrder = (newOrder) => {
     const ordersCollection = collection(db, "orders ")
     addDoc(ordersCollection, newOrder)
         .then((response) => {
-            console.log(response.id)
+            setOrderId(response.id)
+        })
+        .finally(()=>{
+          updateStock( ) 
         })
 }
 
+const updateStock = () => {
+  cart.map(({ quantity, id, ...productCart })=> {
+    const productRef = doc (db, "products", productCart.id)
+    setDoc(productRef, {...productCart, stock: productCart.stock - quantity})
+  })
+
+  deleteCart()
+}
+
+
+
   return (
     <div>
-        <FormCheckout dataForm={dataForm} handleChangeInput={handleChangeInput} handleSubmitForm={handleSubmitForm}/>
+      {
+        orderId ? (
+          <FormSent orderId={orderId}/>
+        ) : (
+
+          <FormCheckout dataForm={dataForm} handleChangeInput={handleChangeInput} handleSubmitForm={handleSubmitForm}/>
+        )
+        }
     </div>
   )  
 } 
