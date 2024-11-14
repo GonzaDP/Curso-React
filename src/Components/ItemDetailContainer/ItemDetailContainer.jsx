@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { getProduct } from "../../data/data"
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom"
 import "./ItemDetailContainer.css"
@@ -7,6 +6,8 @@ import Loading from "../loading/loading"
 import useProducts from "../../hooks/useProductos"
 import { useContext } from "react"
 import { CartContext } from "../Context/CartContext"
+import { doc, getDoc } from "firebase/firestore"
+import db from "../../db/db.js"
 
 const ItemDetailContainer = () => {
     const [product,setProduct] = useState({})
@@ -19,9 +20,18 @@ const ItemDetailContainer = () => {
         addProductInCart(productCart)
     }
 
+    const getProduct = () => {
+        const docRef = doc ( db, "products", idProduct )
+        getDoc(docRef)
+         .then((dataDb)=> {
+            const productDb = { id: dataDb.id, ...dataDb.data() }
+            setProduct(productDb)
+         })
+    }
+
     useEffect(() => {
-        getProduct(idProduct)
-        .then((info) => setProduct(info))
+        getProduct()
+
     }, [idProduct])
 
     return(

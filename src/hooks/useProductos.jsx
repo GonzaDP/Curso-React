@@ -1,35 +1,74 @@
 import { useState, useEffect } from "react";
-import { getProducts, getProduct } from "../data/data";
-import { useParams } from "react-router-dom"
-
+import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import db from "../db/db.js";
 
 const useProducts = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(false)
     const {idCategory} = useParams()
    
-    useEffect(() => {
-        
+
+    const getProducts = () => {
         setLoading(true)
+        const  collectionName = collection(db,"products")
+        getDocs(collectionName)
+        .then((dataDb)=> {
+            
+            const productsDb = dataDb.docs.map((productDb)=> {
+                return {id: productDb.id, ...productDb.data()}
+            })
+            
+           setProducts(productsDb)
         
-        getProducts()
-        .then((info) => {
-    
-            if(idCategory){
-                const filterProduct = info.filter((product) => product.category === idCategory )
-                setProducts(filterProduct)
-                
-            }else{
-                setProducts(info)
-            }
         })
         .catch((error) => {
-            console.error(error)
+            console.log(error)
         })
         .finally(() => {
-            setLoading(false)  
-            console.log(idCategory) 
+            setLoading(false) 
         })
+       
+    }
+
+    const getProductByCategory = () => {
+        setLoading(true)
+        const collectionName = collection(db, "products")
+        const q = query (collectionName, where( "category", "==", idCategory ))
+        getDocs(q)
+        .then((dataDb)=> {
+            const productsDb = dataDb.docs.map((productDb)=> {
+                return {id: productDb.id, ...productDb.data()}
+            })
+            setProducts(productsDb)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+        .finally(() => {
+            setLoading(false) 
+        })
+
+    }
+
+    
+    useEffect(() => {
+        
+        if(idCategory){
+        
+            getProductByCategory()
+            
+        }else{
+            getProducts()
+        }
+        
+        //setLoading(true)
+        //getProducts()     
+
+       // .finally(() => {
+       //     setLoading(false)  
+
+       // })
         
     }, [idCategory])
 
