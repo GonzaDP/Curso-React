@@ -1,4 +1,4 @@
-import { useState } from 'react'  
+import { useState } from 'react'
 import NavBar from './Components/nav/NavBar'
 import './App.css'
 import ItemListContainerWithHoc from './Components/ItemListContainer/ItemListContainer'
@@ -10,21 +10,21 @@ import Checkout from './Components/Checkout/Checkout'
 
 
 function App() {
-  
+
 
   return (
     <div className='fondo'>
       <BrowserRouter>
         <CartProvider>
-          <NavBar /> 
+          <NavBar />
           <Routes>
-            <Route path='/' element={ <ItemListContainerWithHoc  />}/> 
-            <Route path='/category/:idCategory' element={ <ItemListContainerWithHoc  />}/>
-            <Route path='/detail/:idProduct' element={ <ItemDetailContainer />}/>
-            <Route path='/cart' element={<Cart/>}/>
-            <Route path='/checkout' element={<Checkout />}/>
+            <Route path='/' element={<ItemListContainerWithHoc />} />
+            <Route path='/category/:idCategory' element={<ItemListContainerWithHoc />} />
+            <Route path='/detail/:idProduct' element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
           </Routes>
-          </CartProvider>
+        </CartProvider>
       </BrowserRouter>
     </div>
   )

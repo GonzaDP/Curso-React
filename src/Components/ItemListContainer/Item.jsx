@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
 
-const Item = ({product}) => {
+const Item = ({ product }) => {
     return (
         <div className="item">
             <Link to={"/detail/" + product.id} className='itemImg'>
-                <img className="img" src={product.img}/>
+                <img className="img" src={product.img} />
                 <p className="overlay">
-                   COMPRAR
+                    COMPRAR
                 </p>
-            </Link>    
+            </Link>
             <p className="name">{product.name}</p>
         </div>
     )

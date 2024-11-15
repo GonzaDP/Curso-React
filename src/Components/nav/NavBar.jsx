@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
 
     return (
-        
+
         <nav>
             <Link to="/" className='marcaEIcono'>
-                <p>Coffeeland</p>     
+                <p>Coffeeland</p>
             </Link>
             <div className='seccionesNav'>
                 <Link to="/category/Bebidas" className='link'>Bebidas</Link>
@@ -17,7 +17,7 @@ const NavBar = () => {
                 <Link to="/category/Tortas" className='link'>Tortas</Link>
                 <Link to="/category/Sandwichs" className='link'>Sandwichs</Link>
             </div>
-            <CartWidget/>
+            <CartWidget />
         </nav>
     )
 }

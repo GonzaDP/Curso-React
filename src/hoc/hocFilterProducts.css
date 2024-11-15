@@ -1,21 +1,21 @@
-.filterProducts{
+.filterProducts {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.filter{
+.filter {
     display: flex;
     align-items: center;
     margin-top: 1.6rem;
     margin-left: 1rem;
     width: 20rem;
     height: 2rem;
-    
+
 }
 
 
-.filterInput{
+.filterInput {
     width: 100%;
     height: 100%;
     padding-left: 0.7rem;
@@ -23,14 +23,14 @@
     color: #57382c;
     border: solid #57382c;
     border-radius: 1rem;
-    background-color:  #e0ae79;
+    background-color: #e0ae79;
     outline: none;
 }
 
-.filterInput::placeholder{
+.filterInput::placeholder {
     color: #57382c;
 }
 
-.lupita{
+.lupita {
     background-color: #e0ae79;
 }

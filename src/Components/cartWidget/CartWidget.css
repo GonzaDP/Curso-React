@@ -1,4 +1,4 @@
-.contenedor{
+.contenedor {
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 
-img{
+img {
     background-color: #e0ae79;
     border-radius: 2rem;
     padding: 0.5rem;
@@ -16,7 +16,7 @@ img{
     margin-right: 1rem;
 }
 
-p{
+p {
     font-size: 2rem;
     color: #e0ae79;
     margin-left: -0.5rem;

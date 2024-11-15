@@ -8,24 +8,24 @@ import { useParams } from "react-router-dom"
 import { useEffect } from "react"
 
 
-const ItemListContainer = ({products}) => {
-const {loading} = useProducts()
-const {idCategory} = useParams()
+const ItemListContainer = ({ products }) => {
+    const { loading } = useProducts()
+    const { idCategory } = useParams()
 
 
 
-useEffect(()=> {
+    useEffect(() => {
 
-}, [idCategory])
+    }, [idCategory])
 
- 
+
     return (
         <div className="itemlistcontainer">
             {
-            loading === true ?
-            <Loading/>
-            :   
-            <ItemList products={products}/>
+                loading === true ?
+                    <Loading />
+                    :
+                    <ItemList products={products} />
             }
         </div>
     )

@@ -1,4 +1,4 @@
-.cartContainer{
+.cartContainer {
     display: flex;
     margin: 1rem;
     justify-content: space-between;
@@ -7,27 +7,27 @@
     width: 5rem;
 }
 
-.count{
+.count {
     margin: 0;
     color: #57382c;
 }
 
-.addAndDiscard{
+.addAndDiscard {
     width: 1rem;
     height: 1rem;
-    background-color: #57382c ;
+    background-color: #57382c;
     color: #e0ae79;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.addProduct{
-    background-color: #57382c ;
+.addProduct {
+    background-color: #57382c;
     color: #e0ae79;
     margin-bottom: 1rem;
 }
 
-.stock{
-    color: #57382c ;
+.stock {
+    color: #57382c;
 }

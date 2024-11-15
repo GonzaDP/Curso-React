@@ -1,9 +1,9 @@
-.formContainer{
+.formContainer {
     display: flex;
     justify-content: center;
 }
 
-.formCheckout{
+.formCheckout {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -11,11 +11,11 @@
     margin: 1rem;
 }
 
-.formCheckout label{
+.formCheckout label {
     font-size: 1.2rem;
 }
 
-.formCheckout input{
+.formCheckout input {
     font-size: 1rem;
     border: solid #57382c;
     color: #57382c;
@@ -25,7 +25,7 @@
     margin-bottom: 0.5rem;
 }
 
-.submitButton{
+.submitButton {
     margin-top: 1rem;
     background-color: #57382c;
     color: #e0ae79;
@@ -36,7 +36,7 @@
     margin-left: 6.5rem;
 }
 
-.error{
+.error {
     display: flex;
     text-align: center;
     color: #57382c;

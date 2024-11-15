@@ -1,18 +1,18 @@
-.itemdetailcontainer{
+.itemdetailcontainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 1rem;
 }
 
-.sectionImg{
+.sectionImg {
     display: flex;
     width: 35rem;
     height: 35rem;
     border-radius: 17.5rem;
 }
 
-.itemdetailcontainer img{
+.itemdetailcontainer img {
     display: flex;
     width: 100%;
     height: 100%;
@@ -21,11 +21,11 @@
     padding: 0;
 }
 
-.tittle{
+.tittle {
     color: #57382c;
 }
 
-.itemDescription{
+.itemDescription {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,21 +38,21 @@
     overflow: visible;
 }
 
-.itemdetailcontainer h1{
+.itemdetailcontainer h1 {
     width: 27rem;
     font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
-.description{
+.description {
     font-size: 1.5rem;
     color: #774E24;
     width: 30rem;
     text-align: center;
 }
 
-.descriptionPrice{
+.descriptionPrice {
     color: #774E24;
     margin-top: 1rem;
 }

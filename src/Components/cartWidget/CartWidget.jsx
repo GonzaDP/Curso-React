@@ -1,4 +1,4 @@
-import './CartWidget.css'    
+import './CartWidget.css'
 import mugIcon from './mug-saucer-solid.svg';
 import { useContext } from 'react';
 import { CartContext } from '../Context/CartContext';

@@ -10,10 +10,10 @@ import { doc, getDoc } from "firebase/firestore"
 import db from "../../db/db.js"
 
 const ItemDetailContainer = () => {
-    const [product,setProduct] = useState({})
+    const [product, setProduct] = useState({})
     const { addProductInCart } = useContext(CartContext)
-    const {idProduct} = useParams()
-    const {loading} = useProducts()
+    const { idProduct } = useParams()
+    const { loading } = useProducts()
 
     const addProduct = (count) => {
         const productCart = { ...product, quantity: count }
@@ -21,12 +21,12 @@ const ItemDetailContainer = () => {
     }
 
     const getProduct = () => {
-        const docRef = doc ( db, "products", idProduct )
+        const docRef = doc(db, "products", idProduct)
         getDoc(docRef)
-         .then((dataDb)=> {
-            const productDb = { id: dataDb.id, ...dataDb.data() }
-            setProduct(productDb)
-         })
+            .then((dataDb) => {
+                const productDb = { id: dataDb.id, ...dataDb.data() }
+                setProduct(productDb)
+            })
     }
 
     useEffect(() => {
@@ -34,16 +34,16 @@ const ItemDetailContainer = () => {
 
     }, [idProduct])
 
-    return(
-        
+    return (
+
         <>
-        {
-        loading === true ?
-        <Loading/>
-        :   
-        <ItemDetail product={product} addProduct={addProduct}/>
-        }
-    </>
+            {
+                loading === true ?
+                    <Loading />
+                    :
+                    <ItemDetail product={product} addProduct={addProduct} />
+            }
+        </>
     )
 }
 
