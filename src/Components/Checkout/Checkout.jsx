@@ -12,10 +12,12 @@ const Checkout = ({}) => {
   const [dataForm, setDataForm] = useState({
     fullname: "",
     phone: "",
-    email: ""   
+    email: "",
+    checkEmail: ""   
   })
   
 const [orderId, setOrderId] = useState(null)  
+const [error, setError] = useState("");
 const { cart, totalPrice, deleteCart } = useContext(CartContext)
 
 const handleChangeInput = (event) => {
@@ -23,7 +25,16 @@ const handleChangeInput = (event) => {
 }
 
 const handleSubmitForm = (event) => {
-    event.preventDefault();
+  event.preventDefault();
+
+  if (dataForm.email !== dataForm.checkEmail) {
+    setError("Los correos electrónicos no coinciden");
+    return;
+  }
+
+  setError("");
+
+
     const order = {
         buyer: { ...dataForm },
         products: [ ...cart ],
@@ -61,7 +72,7 @@ const updateStock = () => {
           <FormSent orderId={orderId}/>
         ) : (
 
-          <FormCheckout dataForm={dataForm} handleChangeInput={handleChangeInput} handleSubmitForm={handleSubmitForm}/>
+          <FormCheckout dataForm={dataForm} handleChangeInput={handleChangeInput} handleSubmitForm={handleSubmitForm} error={error}/>
         )
         }
     </div>

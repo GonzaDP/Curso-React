@@ -35,3 +35,13 @@
     border-radius: 2.5rem;
     margin-left: 6.5rem;
 }
+
+.error{
+    display: flex;
+    text-align: center;
+    color: #57382c;
+    margin-top: 2rem;
+    border: solid #57382c;
+    padding: 1rem;
+    border-radius: 5rem;
+}

@@ -3,7 +3,7 @@ import "./FormCheckout.css"
 
 
 
-const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
+const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm, error}) => {
 
 
   return (
@@ -15,7 +15,11 @@ const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
             <input type="number" id="phone" name="phone" value={dataForm.phone} onChange={handleChangeInput}/>
             <label htmlFor="email">Email: </label>
             <input type="email" id="email" name="email" value={dataForm.email} onChange={handleChangeInput}/>  
+            <label htmlFor="checkEmail">Confirmar email: </label>
+            <input type="email" id="checkEmail" name="checkEmail" value={dataForm.checkEmail} onChange={handleChangeInput}/>   
             <button className="submitButton" type="submit">Enviar</button>
+
+            {error && <p className="error">{error}</p>}
           </form>
         </div> 
   )  
